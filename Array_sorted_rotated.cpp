@@ -88,7 +88,7 @@ int main()
 
     return 0;
 }*/
-#include <iostream>
+/*#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -117,4 +117,32 @@ int main()
     {
         cout << i << " ";
     }
+}*/
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> arr = {1, 2, 3, 4, 5, 6};
+    vector<int> temp(6, 0);
+    int n = arr.size();
+    int d = 3;
+    for (int i = 0; i < d; i++)
+    {
+        temp[i] = arr[i];
+    }
+    for (int i = 0; i < n; i++)
+    {
+        arr[i - d] = arr[i];
+    }
+    for (int i = 0; i < d; i++)
+    {
+        arr[n - d + i] = temp[i];
+    }
+    for (auto i : arr)
+    {
+        cout << i << " ";
+    }
+    return 0;
 }
