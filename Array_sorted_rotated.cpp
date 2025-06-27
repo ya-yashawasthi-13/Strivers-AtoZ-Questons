@@ -118,7 +118,7 @@ int main()
         cout << i << " ";
     }
 }*/
-#include <iostream>
+/*#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -145,4 +145,26 @@ int main()
         cout << i << " ";
     }
     return 0;
+}*/
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+    vector<int> arr = {1, 2, 0, 4, 0, 6};
+    int n = arr.size();
+    int index = 0 ;
+    vector<int> temp(n, 0);
+    for(int i = 0 ; i < n ; i++){
+        if (arr[i] != 0)
+        {
+            temp[index] = arr[i];
+            index++;
+        }
+    }
+    
+    for (auto val : temp)
+    {
+        cout << val << " ";
+    }
 }
